@@ -1,0 +1,1 @@
+ls -lrt ../Instances/*col | perl -ne 'chomp;split;$file = $_[8]; $name = $_[8]; $name =~ s/\.\.\/Instances\///g; @proc = (1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024); foreach (@proc) {system "a.out $_ $file > $name.$_.result"}' 
